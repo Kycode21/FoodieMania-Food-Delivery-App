@@ -18,7 +18,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    loadData();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      loadData();
+
+    });
+
     super.initState();
   }
 
